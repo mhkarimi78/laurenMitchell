@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-import Consultorio from "../../../public/consultorio-01.jpg";
+import Consultorio from "../../../public/consultorio-01.jpeg";
 
 const skills: { title: string; text: string }[] = [
   {
@@ -44,7 +44,7 @@ const SkillsSection = () => {
 
       <div className="bg-[#F5F5F5] w-full h-fit flex flex-col items-center justify-center py-10 rounded-b-3xl">
         <h2 className="font-semibold text-xl md:text-2xl text-center">
-          <span className="font-light">تخصص‌های</span> دکتر لورن میچل
+          <span className="font-light">ویژگی‌ها و</span> تخصص‌های کلینیک میثم
         </h2>
 
         <div className="my-8 grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-[90%] lg:w-[60rem] mx-auto ">

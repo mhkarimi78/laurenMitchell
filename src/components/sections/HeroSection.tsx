@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-import Lauren from "../../../public/lauren-01.png";
+import Mohammad from "../../../public/lauren-01.jpeg"; // Assuming the image is replaced or renamed for Dr. Mohammad Roustaei
 
 const HeroSection = () => {
   return (
@@ -11,20 +11,20 @@ const HeroSection = () => {
           با اعتماد به نفس لبخند بزنید
         </h1>
         <p className="font-light text-xl md:text-2xl w-full max-w-xs md:max-w-sm">
-          سفر شما به سوی لبخندی بی‌نقص از اینجا آغاز می‌شود!
+          سفر شما به سوی لبخندی بی‌نقص در کلینیک میثم آغاز می‌شود!
         </p>
         <p className="font-light text-sm">
-          دکتر لورن میچل - سائو ژوزه دوس کامپوس - SP <br />
-          CRO 00000 – SP
+          دکتر محمد روستایی  <br />
+         
         </p>
       </div>
 
       <Image
-        src={Lauren}
+        src={Mohammad}
         width={0}
         height={0}
         sizes="100vw"
-        alt="دکتر لورن"
+        alt="دکتر محمد روستایی"
         className="w-80 lg:w-96 h-auto"
       />
     </section>

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-import Consultorio from "../../../public/consultorio-02.png";
+import Consultorio from "../../../public/consultorio-02.jpeg";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 
 const items: { title: string; text: string }[] = [
@@ -60,7 +60,7 @@ const ClinicSection = () => {
           height={0}
           sizes="100vw"
           alt="کلینیک"
-          className="w-full lg:max-w-[50%] h-full object-cover md:px-10 lg:px-0"
+          className="w-full lg:max-w-[50%] max-h-lvh object-cover md:px-10 lg:px-0"
         />
       </div>
     </section>

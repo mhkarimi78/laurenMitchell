@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Vazirmatn } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const poppins = Poppins({
-  subsets: ["latin"],
+const vazirmatn = Vazirmatn({
+  subsets: ["arabic"], // Persian is supported under the 'arabic' subset
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  display: "swap", // Ensures smooth font loading
 });
 
 export const metadata: Metadata = {
-  title:
-    "Dra. Lauren Mitchell | Ortodontia Especializada em Sorrisos Saudáveis",
+  title: "کلینیک دندانپزشکی میثم | ارتودنسی تخصصی برای لبخندهای سالم",
   description:
-    "Dra. Lauren Mitchell é uma experiente dentista especializada em ortodontia dedicada a criar sorrisos saudáveis e confiantes. Oferecemos tratamentos ortodônticos personalizados para pacientes de todas as idades. Agende uma consulta para obter o sorriso dos seus sonhos!",
+    "کلینیک دندانپزشکی میثم با مدیریت دکتر محمد روستایی، متخصص ارتودنسی، به خلق لبخندهای سالم و با اعتماد به نفس اختصاص دارد. ما درمان‌های ارتودنسی شخصی‌سازی‌شده را برای بیماران در تمام سنین ارائه می‌دهیم. ساعات کاری: هر روز ۱۰ صبح تا ۷ عصر، به جز تعطیلات رسمی. ما را در اینستاگرام دنبال کنید: @meysam_dentistry",
   keywords:
-    "ortodontia, dentista, tratamento ortodôntico, sorrisos saudáveis, ortodontista, consultório odontológico, aparelho dentário, correção de dentes, especialista em ortodontia, Lauren Mitchell, saúde bucal, alinhamento dentário, aparelho invisível, odontologia estética, cuidados dentários, ortodontia infantil, prevenção odontológica, higiene bucal, alinhadores transparentes, saúde dos dentes, estética do sorriso, ortodontia para adultos, alinhamento dos dentes, dentes retos, ortodontia avançada, ortodontia moderna, tecnologia odontológica, clínica dentária, exames ortodônticos, correção dental, harmonia facial, ortodontia preventiva, aparelho fixo, tratamento odontológico, saúde oral, alívio da dor dentária, consultas regulares, estética facial, radiografias dentárias, cuidados com os dentes, ortodontia interceptiva, sorriso perfeito, plano de tratamento, conforto odontológico, aparelho removível, exames bucais, check-ups dentários, endodontia",
+    "ارتودنسی, دندانپزشک, درمان ارتودنسی, لبخندهای سالم, متخصص ارتودنسی, کلینیک دندانپزشکی, بریس دندان, اصلاح دندان, محمد روستایی, کلینیک میثم, سلامت دهان, تراز دندان, بریس نامرئی, دندانپزشکی زیبایی, مراقبت‌های دندانی, ارتودنسی کودکان, پیشگیری دندانپزشکی, بهداشت دهان, الاینرهای شفاف, سلامت دندان, زیبایی لبخند, ارتودنسی بزرگسالان, تراز دندان‌ها, دندان‌های صاف, ارتودنسی پیشرفته, ارتودنسی مدرن, فناوری دندانپزشکی, کلینیک دندانپزشکی, معاینات ارتودنسی, اصلاح دندان, هماهنگی چهره, ارتودنسی پیشگیرانه, بریس ثابت, درمان دندانپزشکی, سلامت دهان, تسکین درد دندان, معاینات منظم, زیبایی چهره, رادیوگرافی دندان, مراقبت از دندان‌ها, ارتودنسی مداخله‌ای, لبخند بی‌نقص, طرح درمان, راحتی دندانپزشکی, بریس متحرک, معاینات دهان, چکاپ‌های دندانی, اندودنتیکس",
   robots: "index, follow",
 };
 
@@ -25,8 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR">
-      <body className={poppins.className}>
+    <html lang="fa-IR" dir="rtl">
+      <body className={vazirmatn.className}>
         <Header />
         {children}
         <Footer />

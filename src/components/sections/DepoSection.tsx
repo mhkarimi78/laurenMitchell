@@ -1,21 +1,21 @@
 import Image from "next/image";
 import React from "react";
 import { HiStar, HiLocationMarker, HiPhone } from "react-icons/hi";
-import Lauren from "../../../public/lauren-03.png";
+import Lauren from "../../../public/lauren-03.jpeg";
 import { LuCalendarClock } from "react-icons/lu";
 
 const depos: { name: string; text: string }[] = [
   {
-    name: "گیلرمه بوستامانته",
-    text: "من از درمان با دکتر لورن بسیار راضی هستم! لبخندم هرگز اینقدر زیبا نبوده است. او حرفه‌ای، внимательный و همیشه مطمئن می‌شود که من راحت هستم، توصیه می‌کنم!",
+    name: "نفیسه حیدر",
+    text: "واقعاً از کار دکتر محمد روستایی تو کلینیک میثم راضی‌ام! لبخندم خیلی بهتر شده و اصلاً باورم نمیشه اینقدر تغییر کرده. خیلی با حوصله و دقیقن و حس خوبی به آدم میدن. حتماً پیشنهادشون می‌کنم!",
   },
   {
-    name: "لوآنا اولیویرا",
-    text: "درمان ارتودنسی با دکتر لورن فوق‌العاده بود. نتیجه شگفت‌انگیز است و تیم او بسیار مهربان هستند. این کار بی‌نقص را به همه توصیه می‌کنم!",
+    name: "احمدرضا حمیدی فرد",
+    text: "درمان ارتودنسی‌ام با دکتر روستایی تو کلینیک میثم عالی بود! نتیجه‌ش فوق‌العاده‌ست و تیمشون خیلی گرم و صمیمی‌ان. اگه دنبال یه جای خوب برای دندوناتون هستید، اینجا رو امتحان کنید!",
   },
   {
-    name: "زوئه سانتوس",
-    text: "دکتر لورن زندگی من را تغییر داد. مراقبت و توجه او بی‌نظیر است. از لبخند جدیدم بسیار خوشحال هستم. بدون شک، بهترین انتخاب!",
+    name: "مهسا کریمی",
+    text: "دکتر محمد روستایی تو کلینیک میثم حسابی حالمو خوب کرد! لبخندم خیلی قشنگ شده و همیشه با دقت به حرفام گوش دادن. واقعاً انتخاب درستی بود، خیلی خوشحالم از نتیجه!",
   },
 ];
 
@@ -62,20 +62,6 @@ const DepoSection = () => {
         ))}
       </div>
 
-      <div className="flex flex-wrap items-center justify-center gap-5 mb-7">
-        {convenios.map((convenio, index) => (
-          <Image
-            src={convenio.src}
-            alt="بیمه"
-            key={index}
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="w-28 md:w-44 h-auto aspect-video object-contain"
-          />
-        ))}
-      </div>
-
       <div className="flex flex-col md:flex-row items-center justify-between gap-5 mb-10">
         <Image
           src={Lauren}
@@ -91,23 +77,22 @@ const DepoSection = () => {
             موقعیت و تماس
           </span>
           <h3 className="font-bold text-2xl md:text-3xl lg:text-5xl">
-            کلینیک دندانپزشکی دکتر لورن میچل
+            کلینیک دندانپزشکی میثم
           </h3>
 
           <div className="flex items-center justify-center gap-2">
             <HiLocationMarker size={30} className="text-laurenBlue" />
 
             <p className="text-xs md:text-sm">
-              خیابان سلامت، ۴۵۶ - ژاردیم داس ایندوستریاس، SJC - SP
+              محلاتی (آهنگ)،خيابان شاه آبادى جنوبى، خيابان مير هاشمى، کوچه ده
+              مترى فاطميه، پلاک ۶{" "}
             </p>
           </div>
 
           <div className="flex items-start justify-start gap-2">
             <HiPhone size={30} className="text-laurenBlue" />
 
-            <p className="text-xs md:text-sm">
-              +۵۵ (۱۲) ۰۰۰۰-۰۰۰۰ | +۵۵ (۱۲) ۹۰۰۰۰-۰۰۰۰
-            </p>
+            <p className="text-xs md:text-sm">021-33700979 | 09924441066</p>
           </div>
 
           <button className="rounded-2xl bg-laurenBlue w-full py-4 text-xs font-bold text-white transition-all duration-300 ease-in-out hover:bg-laurenBlue/80 flex items-center justify-center gap-2">

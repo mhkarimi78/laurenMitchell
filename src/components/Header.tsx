@@ -8,7 +8,7 @@ const Header = () => {
     <header className="mx-auto flex w-full md:max-w-[70%] flex-1 flex-wrap items-center justify-around md:justify-between p-4 gap-5 md:gap-0 mb-5">
       <Image
         src={logo}
-        alt="Logo"
+        alt="لوگوی کلینیک میثم"
         width={0}
         height={0}
         sizes="100vw"
@@ -17,7 +17,7 @@ const Header = () => {
       />
 
       <button className="rounded-2xl bg-laurenBlue md:w-full md:max-w-xs p-4 text-xs font-bold text-white transition-all duration-300 ease-in-out hover:bg-laurenBlue/80 flex items-center justify-center gap-2">
-        Agendar Consulta <LuCalendarClock size={24} />
+        رزرو وقت مشاوره <LuCalendarClock size={24} />
       </button>
     </header>
   );
