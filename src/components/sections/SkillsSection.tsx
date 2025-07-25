@@ -5,28 +5,28 @@ import Consultorio from "../../../public/consultorio-01.jpg";
 
 const skills: { title: string; text: string }[] = [
   {
-    title: "Inovação Digital",
-    text: "Utilização de tecnologias avançadas para criar planos de tratamento personalizados.",
+    title: "نوآوری دیجیتال",
+    text: "استفاده از فناوری‌های پیشرفته برای ایجاد برنامه‌های درمانی شخصی‌سازی‌شده.",
   },
   {
-    title: "Ortodontia Preventiva",
-    text: "Intervenções precoces para prevenir problemas ortodônticos.",
+    title: "ارتودنسی پیشگیرانه",
+    text: "مداخلات زودهنگام برای پیشگیری از مشکلات ارتودنسی.",
   },
   {
-    title: "Tratamento Discreto",
-    text: "Especialização em opções estéticas para correção de forma discreta e confortável.",
+    title: "درمان نامحسوس",
+    text: "تخصص در گزینه‌های زیبایی برای اصلاح نامحسوس و راحت.",
   },
   {
-    title: "Cuidado Infantil",
-    text: "Atendimento especializado crianças, garantindo um sorriso saudável.",
+    title: "مراقبت از کودکان",
+    text: "خدمات تخصصی برای کودکان، تضمین لبخندی سالم.",
   },
   {
-    title: "Harmonia Maxilar",
-    text: "Abordagem que visa precisamente corrigir desarmonias na posição dos maxilares.",
+    title: "هماهنگی فکی",
+    text: "رویکردی که به‌طور دقیق ناهماهنگی‌های موقعیت فک‌ها را اصلاح می‌کند.",
   },
   {
-    title: "Integração Cirúrgica",
-    text: "Colaboração com cirurgiões bucomaxilofaciais para casos cirúrgicos.",
+    title: "همکاری جراحی",
+    text: "همکاری با جراحان فک و صورت برای موارد جراحی.",
   },
 ];
 
@@ -38,14 +38,13 @@ const SkillsSection = () => {
         width={0}
         height={0}
         sizes="100vw"
-        alt="Consultório"
+        alt="کلینیک"
         className="w-full h-full max-h-44 md:max-h-72 object-cover rounded-t-3xl"
       />
 
       <div className="bg-[#F5F5F5] w-full h-fit flex flex-col items-center justify-center py-10 rounded-b-3xl">
         <h2 className="font-semibold text-xl md:text-2xl text-center">
-          <span className="font-light">Especialidades da</span> Dra. Lauren
-          Mitchell
+          <span className="font-light">تخصص‌های</span> دکتر لورن میچل
         </h2>
 
         <div className="my-8 grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-[90%] lg:w-[60rem] mx-auto ">

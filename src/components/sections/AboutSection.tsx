@@ -13,27 +13,27 @@ const AboutSection = () => {
         width={0}
         height={0}
         sizes="100vw"
-        alt="Dra. Lauren"
+        alt="دکتر لورن"
         className="w-80 lg:w-96 h-auto"
       />
 
       <div className="flex flex-col items-center justify-center text-center gap-4">
         <h3 className="text-2xl lg:text-3xl font-light">
-          Sobre a <span className="font-semibold">Dra. Lauren Mitchell</span>
+          درباره <span className="font-semibold">دکتر لورن میچل</span>
         </h3>
         <p className="font-light w-full max-w-xs md:max-w-sm">CRO 00000 – SP</p>
         <p className="font-light text-sm w-full max-w-xs md:max-w-sm lg:max-w-md">
-          Em um mundo onde cada sorriso é único, a Dra. Lauren Mitchell traz sua
-          paixão e experiência para moldar sorrisos brilhantes e confiantes. Com
-          mais de 10 anos de dedicação à Ortodontia, ela se destaca como uma
-          especialista comprometida em transformar não apenas dentes, mas vidas.
+          در دنیایی که هر لبخند منحصر به فرد است، دکتر لورن میچل با اشتیاق و
+          تجربه خود لبخندهایی درخشان و با اعتماد به نفس خلق می‌کند. با بیش از ۱۰
+          سال تعهد به ارتودنسی، او به عنوان متخصصی برجسته در تغییر نه تنها
+          دندان‌ها، بلکه زندگی‌ها می‌درخشد.
         </p>
         <p className="text-xl lg:text-2xl font-black text-laurenBlue">
-          +3000 Sorrisos transformados!
+          بیش از ۳۰۰۰ لبخند تحول‌یافته!
         </p>
 
         <button className="rounded-2xl bg-laurenBlue w-full py-4 text-xs font-bold text-white transition-all duration-300 ease-in-out hover:bg-laurenBlue/80 flex items-center justify-center gap-2">
-          Agendar Consulta <LuCalendarClock size={24} />
+          رزرو وقت مشاوره <LuCalendarClock size={24} />
         </button>
       </div>
     </section>

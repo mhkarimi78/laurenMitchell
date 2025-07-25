@@ -6,16 +6,16 @@ import { LuCalendarClock } from "react-icons/lu";
 
 const depos: { name: string; text: string }[] = [
   {
-    name: "Guilherme Bustamante",
-    text: "Estou muito feliz com o tratamento da Dra. Lauren! Meu sorriso nunca esteve tão bonito. Ela é profissional, atenciosa e sempre se certifica de que estou confortável, recomendo! ",
+    name: "گیلرمه بوستامانته",
+    text: "من از درمان با دکتر لورن بسیار راضی هستم! لبخندم هرگز اینقدر زیبا نبوده است. او حرفه‌ای، внимательный و همیشه مطمئن می‌شود که من راحت هستم، توصیه می‌کنم!",
   },
   {
-    name: "Luana Oliveira",
-    text: "O tratamento ortodôntico com a Dra. Lauren foi sensacional. O resultado é incrível, e a equipe é incrivelmente gentil. Recomendo a todos esse trabalho impecável!",
+    name: "لوآنا اولیویرا",
+    text: "درمان ارتودنسی با دکتر لورن فوق‌العاده بود. نتیجه شگفت‌انگیز است و تیم او بسیار مهربان هستند. این کار بی‌نقص را به همه توصیه می‌کنم!",
   },
   {
-    name: "Zoe Santos",
-    text: "A Dra. Lauren mudou minha vida. O cuidado e a atenção que ela oferece são incomparáveis. Estou radiante com meu novo sorriso. Sem dúvida, a melhor escolha!",
+    name: "زوئه سانتوس",
+    text: "دکتر لورن زندگی من را تغییر داد. مراقبت و توجه او بی‌نظیر است. از لبخند جدیدم بسیار خوشحال هستم. بدون شک، بهترین انتخاب!",
   },
 ];
 
@@ -41,7 +41,7 @@ const DepoSection = () => {
   return (
     <section className="w-full max-w-[90%] mx-auto min-h-screen">
       <h3 className="font-black text-laurenBlue text-center text-2xl uppercase">
-        Venha transformar o seu sorriso!
+        بیایید لبخند خود را متحول کنید!
       </h3>
       <div className="flex flex-col md:flex-row flex-wrap lg:flex-nowrap items-center justify-center gap-4 my-7 select-none">
         {depos.map((depo, index) => (
@@ -66,7 +66,7 @@ const DepoSection = () => {
         {convenios.map((convenio, index) => (
           <Image
             src={convenio.src}
-            alt="Convenio"
+            alt="بیمه"
             key={index}
             width={0}
             height={0}
@@ -79,7 +79,7 @@ const DepoSection = () => {
       <div className="flex flex-col md:flex-row items-center justify-between gap-5 mb-10">
         <Image
           src={Lauren}
-          alt="Lauren"
+          alt="لورن"
           width={0}
           height={0}
           sizes="100vw"
@@ -88,17 +88,17 @@ const DepoSection = () => {
 
         <div className="flex flex-col items-start justify-start text-center md:text-start gap-3 w-full md:max-w-[60%]">
           <span className="font-light text-2xl justify-center items-center mx-auto md:mx-0">
-            Localização e Contato
+            موقعیت و تماس
           </span>
           <h3 className="font-bold text-2xl md:text-3xl lg:text-5xl">
-            Consultório Odontológico Dra. Lauren Mitchell
+            کلینیک دندانپزشکی دکتر لورن میچل
           </h3>
 
           <div className="flex items-center justify-center gap-2">
             <HiLocationMarker size={30} className="text-laurenBlue" />
 
             <p className="text-xs md:text-sm">
-              Avenida da Saúde, 456 - Jardim das Indústrias, SJC - SP
+              خیابان سلامت، ۴۵۶ - ژاردیم داس ایندوستریاس، SJC - SP
             </p>
           </div>
 
@@ -106,12 +106,12 @@ const DepoSection = () => {
             <HiPhone size={30} className="text-laurenBlue" />
 
             <p className="text-xs md:text-sm">
-              +55 (12) 0000-0000 | +55 (12) 90000-0000
+              +۵۵ (۱۲) ۰۰۰۰-۰۰۰۰ | +۵۵ (۱۲) ۹۰۰۰۰-۰۰۰۰
             </p>
           </div>
 
           <button className="rounded-2xl bg-laurenBlue w-full py-4 text-xs font-bold text-white transition-all duration-300 ease-in-out hover:bg-laurenBlue/80 flex items-center justify-center gap-2">
-            Agendar Consulta <LuCalendarClock size={24} />
+            رزرو وقت مشاوره <LuCalendarClock size={24} />
           </button>
         </div>
       </div>

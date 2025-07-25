@@ -6,24 +6,24 @@ import { BsFillPatchCheckFill } from "react-icons/bs";
 
 const items: { title: string; text: string }[] = [
   {
-    title: "Ambiente Acolhedor",
-    text: "Projetada para proporcionar aos pacientes uma atmosfera acolhedora e reconfortante.",
+    title: "محیط دلپذیر",
+    text: "طراحی شده برای ایجاد فضایی گرم و آرامش‌بخش برای بیماران.",
   },
   {
-    title: "Tecnologia de Ponta",
-    text: "Equipada com tecnologia de última geração, para melhor atender nossos pacientes.",
+    title: "تکنولوژی پیشرفته",
+    text: "مجهز به فناوری‌های روز دنیا برای ارائه بهترین خدمات به بیماران.",
   },
   {
-    title: "Abordagem Personalizada",
-    text: "O plano de tratamento é cuidadosamente adaptado às necessidades individuais.",
+    title: "رویکرد شخصی‌سازی‌شده",
+    text: "برنامه درمانی به دقت مطابق با نیازهای فردی تنظیم می‌شود.",
   },
   {
-    title: "Pós-Tratamento Excepcional",
-    text: "A Dra. Lauren está sempre disponível para responder a dúvidas e fornecer orientações.",
+    title: "پشتیبانی استثنایی پس از درمان",
+    text: "دکتر لورن همیشه برای پاسخ به سؤالات و ارائه راهنمایی در دسترس است.",
   },
   {
-    title: "Agendamento Flexível",
-    text: "Oferecemos flexibilidade para garantir que nossos horários atendam às suas necessidades.",
+    title: "زمان‌بندی انعطاف‌پذیر",
+    text: "ما انعطاف‌پذیری در برنامه‌ریزی ارائه می‌دهیم تا با نیازهای شما هماهنگ باشد.",
   },
 ];
 
@@ -31,7 +31,7 @@ const ClinicSection = () => {
   return (
     <section className="w-full max-w-[90%] mx-auto bg-[#F5F5F5] pt-8 rounded-3xl">
       <h2 className="font-light text-2xl md:text-4xl text-center">
-        Conheça melhor a Clínica
+        با کلینیک بیشتر آشنا شوید
       </h2>
       <div className="mb-10 bg-[#F5F5F5] flex flex-col lg:flex-row items-center justify-around pb-10 px-5 rounded-3xl gap-8">
         <div className="flex flex-col items-center justify-center">
@@ -59,7 +59,7 @@ const ClinicSection = () => {
           width={0}
           height={0}
           sizes="100vw"
-          alt="Consultório"
+          alt="کلینیک"
           className="w-full lg:max-w-[50%] h-full object-cover md:px-10 lg:px-0"
         />
       </div>
