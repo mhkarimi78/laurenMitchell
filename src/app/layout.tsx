@@ -26,9 +26,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fa-IR" dir="rtl">
-      <body className={vazirmatn.className}>
+      <body className={vazirmatn.className + " flex flex-col min-h-screen"}>
         <Header />
-        {children}
+        <main style={{ flex: 1 }}>{children}</main>
         <Footer />
       </body>
     </html>

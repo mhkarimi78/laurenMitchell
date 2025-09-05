@@ -7,14 +7,14 @@ const currentYear = new Date().getFullYear();
 
 const Footer = () => {
   return (
-    <footer className="mx-auto flex w-full flex-1 flex-wrap items-center justify-around p-4 gap-5 md:gap-0 bg-[#F5F5F5]">
+    <footer className="mx-auto flex w-full h-28 min-h-28 max-h-28 flex-wrap items-center justify-around p-4 gap-5 md:gap-0 bg-[#F5F5F5]">
       <Image
         src={logo}
         alt="لوگوی کلینیک میثم"
         width={0}
         height={0}
         sizes="100vw"
-        className="h-auto w-36"
+        className="h-full max-h-full w-auto"
         priority
       />
 

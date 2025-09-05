@@ -5,7 +5,7 @@ import Mohammad from "../../../public/lauren-01.jpeg"; // Assuming the image is 
 
 const HeroSection = () => {
   return (
-    <section className="w-full max-w-[90%] mx-auto flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-32 mb-10">
+    <section className="w-full max-w-[90%] mx-auto flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-32 m-10">
       <div className="flex flex-col items-center justify-center text-center gap-4">
         <h1 className="uppercase text-2xl md:text-4xl font-black text-laurenBlue">
           با اعتماد به نفس لبخند بزنید
