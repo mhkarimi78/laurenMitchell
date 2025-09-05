@@ -29,15 +29,15 @@ export default function LoginPage() {
   const toEnglishDigits = (str: string) => {
     const persianNumbers = [
       /[\u06F0-\u06F9]/g,
-      (c) => String.fromCharCode(c.charCodeAt(0) - 1728),
+      (c: any) => String.fromCharCode(c.charCodeAt(0) - 1728),
     ];
     const arabicNumbers = [
       /[\u0660-\u0669]/g,
-      (c) => String.fromCharCode(c.charCodeAt(0) - 1584),
+      (c: any) => String.fromCharCode(c.charCodeAt(0) - 1584),
     ];
     return str
-      .replace(persianNumbers[0], persianNumbers[1])
-      .replace(arabicNumbers[0], arabicNumbers[1])
+      .replace(persianNumbers[0] as RegExp, persianNumbers[1] as (c: string) => string)
+      .replace(arabicNumbers[0] as RegExp, arabicNumbers[1] as (c: string) => string)
       .replace(/[^0-9]/g, "");
   };
 
