@@ -14,7 +14,7 @@ const HeroSection = () => {
           سفر شما به سوی لبخندی بی‌نقص در کلینیک میثم آغاز می‌شود!
         </p>
         <p className="font-light text-sm">
-          دکتر محمد روستایی  <br />
+          کلینیک میثم  <br />
          
         </p>
       </div>
@@ -24,7 +24,7 @@ const HeroSection = () => {
         width={0}
         height={0}
         sizes="100vw"
-        alt="دکتر محمد روستایی"
+        alt="کلینیک میثم"
         className="w-80 lg:w-96 h-auto"
       />
     </section>
