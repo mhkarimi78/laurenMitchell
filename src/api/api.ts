@@ -1,6 +1,8 @@
+const baseUrl = "https://dentis.liara.run/api";
+
 // گرفتن لیست تخصص‌ها
 export async function getSpecialties() {
-  const res = await fetch("https://dentis.liara.run/api/Specialties");
+  const res = await fetch(`${baseUrl}/Specialties`);
   const data = await res.json();
   console.log("getSpecialties response:", data, res);
   if (!res.ok) throw new Error("خطا در دریافت تخصص‌ها");
@@ -9,19 +11,21 @@ export async function getSpecialties() {
 
 // ثبت رزرو جدید
 export async function createReservation({
-  jwt,
   specialtyId,
   reservationDate,
   startTime,
   endTime,
 }: {
-  jwt: string;
   specialtyId: number;
   reservationDate: string;
   startTime: string;
   endTime: string;
 }) {
-  const res = await fetch("https://dentis.liara.run/api/Reservations", {
+  const jwt =
+    typeof window !== "undefined" ? localStorage.getItem("jwt") : null;
+  if (!jwt) throw new Error("برای ثبت رزرو باید وارد شوید.");
+
+  const res = await fetch(`${baseUrl}/Reservations`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -34,21 +38,47 @@ export async function createReservation({
       endTime,
     }),
   });
-  const text = await res.text();
-  let data;
-  try {
-    data = JSON.parse(text);
-  } catch {
-    data = text;
+
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(text || "ثبت رزرو با خطا مواجه شد.");
   }
+  const data = await res.json();
   console.log("createReservation response:", data, res);
-  if (!res.ok) throw new Error(data.message || "ثبت رزرو با خطا مواجه شد.");
   return data;
 }
 
+export async function cancelReservation({
+  reservationId,
+}: {
+  reservationId: number;
+}) {
+  const jwt =
+    typeof window !== "undefined" ? localStorage.getItem("jwt") : null;
+  if (!jwt) throw new Error("برای دریافت رزروها باید وارد شوید.");
+
+  const response = await fetch(`${baseUrl}/Reservations/${reservationId}`, {
+    method: "DELETE",
+    headers: {
+      Authorization: `Bearer ${jwt}`,
+      "Content-Type": "application/json",
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error(`Failed to cancel reservation: ${response.statusText}`);
+  }
+
+  return response.json(); // یا اگر API چیزی برنمی‌گرداند، می‌توانید این خط را حذف کنید
+}
+
 // گرفتن رزروهای کاربر
-export async function getMyReservations(jwt: string) {
-  const res = await fetch("https://dentis.liara.run/api/Reservations/MyReserves", {
+export async function getMyReservations() {
+  const jwt =
+    typeof window !== "undefined" ? localStorage.getItem("jwt") : null;
+  if (!jwt) throw new Error("برای دریافت رزروها باید وارد شوید.");
+
+  const res = await fetch(`${baseUrl}/Reservations/MyReserves`, {
     headers: {
       Authorization: `Bearer ${jwt}`,
       Accept: "application/json",
@@ -61,13 +91,18 @@ export async function getMyReservations(jwt: string) {
 }
 
 // ثبت نام
-export async function registerUser({ firstName, lastName, nationalId, phoneNumber }: {
+export async function registerUser({
+  firstName,
+  lastName,
+  nationalId,
+  phoneNumber,
+}: {
   firstName: string;
   lastName: string;
   nationalId: string;
   phoneNumber: string;
 }) {
-  const res = await fetch("https://dentis.liara.run/api/Auth/register", {
+  const res = await fetch(`${baseUrl}/Auth/register`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ firstName, lastName, nationalId, phoneNumber }),
@@ -86,7 +121,7 @@ export async function registerUser({ firstName, lastName, nationalId, phoneNumbe
 
 // ارسال کد تایید
 export async function sendVerification(phoneNumber: string) {
-  const res = await fetch("https://dentis.liara.run/api/Auth/send-verification", {
+  const res = await fetch(`${baseUrl}/Auth/send-verification`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ phoneNumber }),
@@ -100,22 +135,31 @@ export async function sendVerification(phoneNumber: string) {
 }
 
 // تایید کد و دریافت JWT
-export async function verifyPhone({ phoneNumber, verificationCode }: {
+export async function verifyPhone({
+  phoneNumber,
+  verificationCode,
+}: {
   phoneNumber: string;
   verificationCode: string;
 }) {
-  const res = await fetch("https://dentis.liara.run/api/Auth/verify-phone", {
+  const res = await fetch(`${baseUrl}/Auth/verify-phone`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ phoneNumber, verificationCode }),
   });
   const data = await res.json();
   console.log("verifyPhone response:", data, res);
-  if (!res.ok) throw new Error(data.message || "کد وارد شده صحیح نیست یا منقضی شده است.");
+  if (!res.ok)
+    throw new Error(data.message || "کد وارد شده صحیح نیست یا منقضی شده است.");
   return data;
 }
 
-export async function getAvailableDays({ specialtyId }: { specialtyId: string | number }) {
+// گرفتن روزهای قابل دسترس
+export async function getAvailableDays({
+  specialtyId,
+}: {
+  specialtyId: string | number;
+}) {
   const today = new Date();
   const days: string[] = [];
   for (let i = 0; i < 30; i++) {
@@ -124,7 +168,7 @@ export async function getAvailableDays({ specialtyId }: { specialtyId: string | 
     const dateStr = d.toISOString().slice(0, 10);
     // eslint-disable-next-line no-await-in-loop
     const res = await fetch(
-      `https://dentis.liara.run/api/reservations/available-times?date=${dateStr}&specialtyId=${specialtyId}`
+      `${baseUrl}/reservations/available-times?date=${dateStr}&specialtyId=${specialtyId}`
     );
     const data = await res.json();
     console.log(`getAvailableDays [${dateStr}] response:`, data, res);
